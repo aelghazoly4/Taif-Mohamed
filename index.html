@@ -33,7 +33,7 @@
         <link rel="stylesheet" type="text/css" href="/custom.css?t=1783250533">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital@1&family=Aref+Ruqaa:wght@400;700&family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital@1&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
         <script nomodule src="https://static.tildacdn.net/js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
         <script type="text/javascript">
             function t_onReady(func) {
@@ -149,12 +149,8 @@
             )();
         </script>
         <style>
-            /* Aref Ruqaa Ink is a colour font: recolour its palette to the invitation's gold */
-            @font-palette-values --wg-gold {
-                font-family: 'Aref Ruqaa Ink';
-                override-colors: 0 #8a6528, 1 #7a5622, 2 #a07a38, 3 #6b4a1c, 4 #7a5622, 5 #8a6528, 6 #7a5622, 7 #6b4a1c;
-            }
-            #rec2443433723 .wg-names .wg-name, .wg-inv-name b, #rec2443433853 .tn-atom.wg-dua { font-palette: --wg-gold; }
+            /* Names/du'a use the plain (single-colour) Aref Ruqaa: the Ink version is a colour font
+               that shows its default red palette on mobile browsers without palette-override support. */
             /* ===== Hero names: bold Ruqaa calligraphy, side by side ===== */
             #rec2443433723 .tn-elem[data-elem-id="1779566247730000001"] .tn-atom.wg-names {
                 display: flex;
@@ -162,7 +158,7 @@
                 justify-content: center;
                 gap: clamp(10px, 3.2vw, 28px);
                 white-space: nowrap;
-                font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri', serif;
+                font-family: 'Aref Ruqaa', 'Amiri', serif;
                 font-weight: 700;
                 font-size: min(72px, 21vw);
                 line-height: 1.35;
@@ -186,10 +182,11 @@
             /* ===== Closing du'a (moved to the end of the page) ===== */
             #rec2443433853 .tn-elem[data-elem-id="1763405219328"] .tn-atom.wg-dua {
                 letter-spacing: 0;
-                font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri', serif;
+                font-family: 'Aref Ruqaa', 'Amiri', serif;
                 font-weight: 700;
                 font-size: clamp(30px, 8.6vw, 44px);
                 line-height: 1.5;
+                color: #7a5622;
                 white-space: nowrap;
             }
 
@@ -225,7 +222,7 @@
             }
             .wg-inv-name { display: flex; flex-direction: column; align-items: center; }
             .wg-inv-name b {
-                font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri', serif;
+                font-family: 'Aref Ruqaa', 'Amiri', serif;
                 font-weight: 700;
                 font-size: clamp(44px, 12.5vw, 62px);
                 line-height: 1.25;
@@ -2082,9 +2079,9 @@
                         </div>
                         <div class='t396__elem tn-elem tn-elem__24434337231779566247730000001 t-animate' data-elem-id='1779566247730000001' data-elem-type='text' data-field-top-value="334" data-field-left-value="320" data-field-height-value="100" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="59" data-field-top-res-320-value="329" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-fontsize-res-320-value="59" data-field-left-res-480-value="-38" data-field-left-res-640-value="42" data-field-left-res-960-value="202">
                             <div class='tn-atom wg-names' dir="rtl" field='tn_text_1779566247730000001'>
-                                <span class="wg-name">طيف</span>
-                                <span class="wg-amp">&amp;</span>
                                 <span class="wg-name">محمد</span>
+                                <span class="wg-amp">&amp;</span>
+                                <span class="wg-name">طيف</span>
                             </div>
                         </div>
                         <!-- <div class='t396__elem tn-elem tn-elem__24434337231779626065755000001 t-animate' data-elem-id='1779626065755000001' data-elem-type='text' data-field-top-value="491" data-field-left-value="320" data-field-height-value="37" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="fixedsize" data-field-fontsize-value="19" data-field-top-res-320-value="487" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
@@ -2655,9 +2652,9 @@
                                 بِكُلِّ الحُبِّ نَدعُوكُم لِحُضُورِ حَفلِ زَفافِ
                             </p>
                             <div class="wg-inv-names">
-                                <div class="wg-inv-name"><b>طيف</b><small>وائل السيد</small></div>
-                                <span class="wg-inv-amp">&amp;</span>
                                 <div class="wg-inv-name"><b>محمد</b><small>حسن بامشموس</small></div>
+                                <span class="wg-inv-amp">&amp;</span>
+                                <div class="wg-inv-name"><b>طيف</b><small>وائل السيد</small></div>
                             </div>
                             <div class="wg-inv-orn" aria-hidden="true"><i></i><span>&#10070;</span><i></i></div>
                             <p class="wg-inv-note">وَذَلِكَ بِمَشِيئَةِ اللهِ تَعَالَى</p>
