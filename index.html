@@ -33,7 +33,7 @@
         <link rel="stylesheet" type="text/css" href="/custom.css?t=1783250533">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital@1&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital@1&family=Aref+Ruqaa:wght@400;700&family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
         <script nomodule src="https://static.tildacdn.net/js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
         <script type="text/javascript">
             function t_onReady(func) {
@@ -148,6 +148,148 @@
             }
             )();
         </script>
+        <style>
+            /* Aref Ruqaa Ink is a colour font: recolour its palette to the invitation's gold */
+            @font-palette-values --wg-gold {
+                font-family: 'Aref Ruqaa Ink';
+                override-colors: 0 #8a6528, 1 #7a5622, 2 #a07a38, 3 #6b4a1c, 4 #7a5622, 5 #8a6528, 6 #7a5622, 7 #6b4a1c;
+            }
+            #rec2443433723 .wg-names .wg-name, .wg-inv-name b, #rec2443433853 .tn-atom.wg-dua { font-palette: --wg-gold; }
+            /* ===== Hero names: bold Ruqaa calligraphy, side by side ===== */
+            #rec2443433723 .tn-elem[data-elem-id="1779566247730000001"] .tn-atom.wg-names {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: clamp(10px, 3.2vw, 28px);
+                white-space: nowrap;
+                font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri', serif;
+                font-weight: 700;
+                font-size: min(72px, 21vw);
+                line-height: 1.35;
+                color: #866739;
+            }
+            #rec2443433723 .wg-names .wg-name {
+                display: inline-block;
+                padding: 0.08em 0.1em 0.18em;
+                color: #7a5622;
+                text-shadow: 0 2px 3px rgba(90, 63, 22, 0.18);
+            }
+            #rec2443433723 .wg-names .wg-amp {
+                font-family: 'EB Garamond', serif;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.42em;
+                color: #b9985a;
+                transform: translateY(0.12em);
+            }
+
+            /* ===== Closing du'a (moved to the end of the page) ===== */
+            #rec2443433853 .tn-elem[data-elem-id="1763405219328"] .tn-atom.wg-dua {
+                letter-spacing: 0;
+                font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri', serif;
+                font-weight: 700;
+                font-size: clamp(30px, 8.6vw, 44px);
+                line-height: 1.5;
+                white-space: nowrap;
+            }
+
+            #rec2443433773 { margin-top: -100px; position: relative; }
+            #rec2443433783 { margin-bottom: -45px; }
+            /* ===== Invitation card text (arch layout) ===== */
+            .wg-frame-verse-text { justify-content: flex-start !important; padding-top: 14px !important; }
+            .wg-inv-bismillah {
+                direction: rtl;
+                font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+                font-weight: 700;
+                font-size: clamp(30px, 8.4vw, 40px);
+                color: #3a2a0e;
+                margin: 0 0 14px;
+                line-height: 1.5;
+            }
+            .wg-inv-lead {
+                direction: rtl;
+                font-family: 'Amiri', 'Traditional Arabic', serif;
+                font-weight: 700;
+                font-size: clamp(16px, 4.4vw, 20px);
+                line-height: 1.95;
+                color: #3a2a0e;
+                margin: 0 0 22px;
+            }
+            .wg-inv-names {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: clamp(10px, 3vw, 20px);
+                direction: rtl;
+                margin-bottom: 14px;
+            }
+            .wg-inv-name { display: flex; flex-direction: column; align-items: center; }
+            .wg-inv-name b {
+                font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri', serif;
+                font-weight: 700;
+                font-size: clamp(44px, 12.5vw, 62px);
+                line-height: 1.25;
+                padding: 0.05em 0.1em 0.12em;
+                color: #7a5622;
+            }
+            .wg-inv-name small {
+                font-family: 'Aref Ruqaa', 'Amiri', serif;
+                font-weight: 400;
+                font-size: clamp(17px, 4.7vw, 21px);
+                color: #866739;
+                margin-top: -4px;
+            }
+            .wg-inv-amp {
+                font-family: 'EB Garamond', serif;
+                font-style: italic;
+                font-size: clamp(26px, 7vw, 34px);
+                color: #b9985a;
+                align-self: center;
+                margin-top: -10px;
+            }
+            .wg-inv-orn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 88%;
+                margin: 4px 0 14px;
+                color: #b9985a;
+                font-size: 13px;
+            }
+            .wg-inv-orn i { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #b9985a, transparent); }
+            .wg-inv-note {
+                direction: rtl;
+                font-family: 'Amiri', serif;
+                font-weight: 700;
+                font-size: clamp(16px, 4.5vw, 20px);
+                color: #3a2a0e;
+                margin: 0 0 20px;
+            }
+            .wg-inv-info {
+                direction: rtl;
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
+                gap: clamp(14px, 4vw, 26px);
+                width: 100%;
+            }
+            .wg-inv-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3px;
+                min-width: 0;
+                flex: 1 1 0;
+                font-family: 'Amiri', serif;
+                color: #3a2a0e;
+            }
+            .wg-inv-col svg { width: 30px; height: 30px; margin-bottom: 4px; }
+            .wg-inv-col .k { font-weight: 700; font-size: clamp(17px, 4.8vw, 21px); }
+            .wg-inv-col .v { direction: ltr; unicode-bidi: isolate; font-weight: 700; font-size: clamp(16px, 4.5vw, 19px); letter-spacing: .5px; }
+            .wg-inv-col .h { font-weight: 400; font-size: clamp(13px, 3.6vw, 15px); color: #6b5231; }
+            .wg-inv-vline { width: 1px; background: linear-gradient(180deg, transparent, #866739 18%, #866739 82%, transparent); }
+        </style>
     </head>
     <body class="t-body" style="margin:0;">
         <!-- ===== Custom Open-Invitation Animation (birds & petals on click) ===== -->
@@ -1939,16 +2081,10 @@
                             </div>
                         </div>
                         <div class='t396__elem tn-elem tn-elem__24434337231779566247730000001 t-animate' data-elem-id='1779566247730000001' data-elem-type='text' data-field-top-value="334" data-field-left-value="320" data-field-height-value="100" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="59" data-field-top-res-320-value="329" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-fontsize-res-320-value="59" data-field-left-res-480-value="-38" data-field-left-res-640-value="42" data-field-left-res-960-value="202">
-                            <div class='tn-atom' dir="rtl" field='tn_text_1779566247730000001' style="font-family:'Aref Ruqaa','Amiri',serif;font-weight:700;">
-                                <div style="margin-bottom:22px;">طيف</div>
-                                <div style="font-size:0.35em;margin-bottom:22px;">و</div>
-                                <div>محمد</div>
-                            </div>
-                        </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337231779566247730000003 t-animate' data-elem-id='1779566247730000003' data-elem-type='text' data-field-top-value="475" data-field-left-value="320" data-field-height-value="37" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-top-res-320-value="475" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
-                            <div class='tn-atom' dir="rtl" field='tn_text_1779566247730000003' style="font-family:'Amiri',serif;">
-                                <div style="margin-bottom:24px;">٢٣ أكتوبر ٢٠٢٦</div>
-                                <div>١٢ جماد الأول ١٤٤٨هـ</div>
+                            <div class='tn-atom wg-names' dir="rtl" field='tn_text_1779566247730000001'>
+                                <span class="wg-name">طيف</span>
+                                <span class="wg-amp">&amp;</span>
+                                <span class="wg-name">محمد</span>
                             </div>
                         </div>
                         <!-- <div class='t396__elem tn-elem tn-elem__24434337231779626065755000001 t-animate' data-elem-id='1779626065755000001' data-elem-type='text' data-field-top-value="491" data-field-left-value="320" data-field-height-value="37" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2.3" data-animate-delay="3" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="fixedsize" data-field-fontsize-value="19" data-field-top-res-320-value="487" data-field-left-res-320-value="-118" data-animate-delay-res-320="3" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
@@ -2513,19 +2649,31 @@
                     <div class="wg-frame-verse">
                         <img class="wg-frame-img" src="https://static.tildacdn.net/tild6634-6438-4366-b831-343330323762/frsame_1.png" alt=""/>
                         <div class="wg-frame-verse-text">
-                            <p class="wg-frame-verse-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-                            <p class="wg-frame-verse-arabic">
-                                لِمَنْ كَانَ وِصَالُهُم عَزِيزًا دَومًا عَلَى قُلُوبِنَا
+                            <p class="wg-inv-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                            <p class="wg-inv-lead">
+                                لِمَنْ كَانَ وِصَالُهُم عَزِيزًا دَومًا عَلَى قُلُوبِنَا<br/>
+                                بِكُلِّ الحُبِّ نَدعُوكُم لِحُضُورِ حَفلِ زَفافِ
                             </p>
-                            <div class="wg-frame-verse-rule"></div>
-                            <p class="wg-frame-verse-en">
-                                بِكُلِّ الحُبِّ نَدعُوكُم لِحُضُورِ حَفلِ زَفافِ<br/>
-                                <span class="wg-frame-verse-names">طيف السيد ومحمد بامشموس</span><br/>
-                                وَذَلِكَ بِمَشِيئَةِ اللهِ تَعَالَى
-                            </p>
-                            <div class="wg-frame-verse-cite">
-                                الجمعة ٢٣ أكتوبر ٢٠٢٦ – ١٢ جماد الأول ١٤٤٨هـ<br/>
-                                قاعة روس
+                            <div class="wg-inv-names">
+                                <div class="wg-inv-name"><b>طيف</b><small>وائل السيد</small></div>
+                                <span class="wg-inv-amp">&amp;</span>
+                                <div class="wg-inv-name"><b>محمد</b><small>حسن بامشموس</small></div>
+                            </div>
+                            <div class="wg-inv-orn" aria-hidden="true"><i></i><span>&#10070;</span><i></i></div>
+                            <p class="wg-inv-note">وَذَلِكَ بِمَشِيئَةِ اللهِ تَعَالَى</p>
+                            <div class="wg-inv-info">
+                                <div class="wg-inv-col">
+                                    <svg viewBox="0 0 32 32" fill="none" stroke="#866739" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="24" height="22" rx="4"/><path d="M4 12h24M10 3v6M22 3v6"/><g fill="#866739" stroke="none"><circle cx="10" cy="17" r="1.4"/><circle cx="16" cy="17" r="1.4"/><circle cx="22" cy="17" r="1.4"/><circle cx="10" cy="23" r="1.4"/><circle cx="16" cy="23" r="1.4"/><circle cx="22" cy="23" r="1.4"/></g></svg>
+                                    <span class="k">الجمعة</span>
+                                    <span class="v"><bdi dir="ltr">٢٣ / ١٠ / ٢٠٢٦</bdi></span>
+                                    <span class="h">١٢ جماد الأول ١٤٤٨هـ</span>
+                                </div>
+                                <div class="wg-inv-vline"></div>
+                                <div class="wg-inv-col">
+                                    <svg viewBox="0 0 32 32" fill="none" stroke="#866739" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29s9-8.2 9-15.5A9 9 0 0 0 7 13.5C7 20.8 16 29 16 29z"/><circle cx="16" cy="13.5" r="3.4"/></svg>
+                                    <span class="k">قاعة</span>
+                                    <span class="v">روز</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2851,7 +2999,7 @@
                                         const distance = eventLocal - now;
                                         if (distance < 0) {
                                             clearInterval(interval);
-                                            document.getElementById("countdownContainer").innerHTML = "بدأ الاحتفال";
+                                            document.getElementById("countdownContainer").innerHTML = "اكتملت فرحتنا بحضوركم";
                                             return;
                                         }
                                         document.getElementById("days").textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
@@ -2863,7 +3011,7 @@
                             </div>
                         </div>
                         <div class='t396__elem tn-elem tn-elem__24434337531771277026942000001' data-elem-id='1771277026942000001' data-elem-type='text' data-field-top-value="45" data-field-left-value="323" data-field-height-value="64" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="41" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
-                            <div class='tn-atom' dir="rtl" field='tn_text_1771277026942000001' style="font-family:'Aref Ruqaa','Amiri',serif;font-weight:700;">تبدأ احتفالاتنا بعد</div>
+                            <div class='tn-atom' dir="rtl" field='tn_text_1771277026942000001' style="font-family:'Aref Ruqaa','Amiri',serif;font-weight:700;">تكتمل فرحتنا بحضوركم</div>
                         </div>
                         <div class='t396__elem tn-elem tn-elem__24434337531779543504626 t-animate' data-elem-id='1779543504626' data-elem-type='image' data-field-top-value="15" data-field-left-value="531" data-field-height-value="28" data-field-width-value="139" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="zoomin" data-animate-duration="2" data-animate-scale="0.15" data-animate-mobile="y" data-field-filewidth-value="471" data-field-fileheight-value="95" data-field-heightmode-value="hug" data-field-left-res-320-value="91" data-field-height-res-320-value="28" data-field-left-res-480-value="171" data-field-height-res-480-value="28" data-field-left-res-640-value="251" data-field-height-res-640-value="28" data-field-left-res-960-value="411" data-field-height-res-960-value="28">
                             <div class='tn-atom'>
@@ -2887,17 +3035,17 @@
                 <!-- T396 -->
                 <style>
                     #rec2443433773 .t396__artboard {
-                        height: 489px;
+                        height: 379px;
                         background-color: #f9e6d4;
                         overflow: visible;
                     }
 
                     #rec2443433773 .t396__filter {
-                        height: 489px;
+                        height: 379px;
                     }
 
                     #rec2443433773 .t396__carrier {
-                        height: 489px;
+                        height: 379px;
                         background-position: center center;
                         background-attachment: scroll;
                         background-size: cover;
@@ -3007,7 +3155,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1779543504626"] {
                         z-index: 3;
-                        top: 110px;
+                        top: 0px;
                         ;left: calc(50% - 600px + 529px);
                         ;width: 139px;
                         height: auto;
@@ -3053,7 +3201,7 @@
                         color: #5a3f16;
                         text-align: center;
                         z-index: 3;
-                        top: 184px;
+                        top: 74px;
                         ;left: calc(50% - 600px + 642px);
                         ;width: 94px;
                         height: auto;
@@ -3130,7 +3278,7 @@
                         color: #866739;
                         text-align: center;
                         z-index: 3;
-                        top: 182px;
+                        top: 72px;
                         ;left: calc(50% - 600px + 444px);
                         ;width: 115px;
                         height: auto;
@@ -3208,7 +3356,7 @@
                         color: #5a3f16;
                         text-align: center;
                         z-index: 3;
-                        top: 266px;
+                        top: 156px;
                         ;left: calc(50% - 600px + 649px);
                         ;width: 91px;
                         height: auto;
@@ -3285,7 +3433,7 @@
                         color: #866739;
                         text-align: center;
                         z-index: 3;
-                        top: 264px;
+                        top: 154px;
                         ;left: calc(50% - 600px + 444px);
                         ;width: 115px;
                         height: auto;
@@ -3363,7 +3511,7 @@
                         color: #5a3f16;
                         text-align: center;
                         z-index: 3;
-                        top: 365px;
+                        top: 255px;
                         ;left: calc(50% - 600px + 654px);
                         ;width: 69px;
                         height: auto;
@@ -3440,7 +3588,7 @@
                         color: #866739;
                         text-align: center;
                         z-index: 3;
-                        top: 352px;
+                        top: 242px;
                         ;left: calc(50% - 600px + 444px);
                         ;width: 115px;
                         height: auto;
@@ -3518,7 +3666,7 @@
                         color: #5a3f16;
                         text-align: center;
                         z-index: 3;
-                        top: 442px;
+                        top: 332px;
                         ;left: calc(50% - 600px + 658px);
                         ;width: 61px;
                         height: auto;
@@ -3595,7 +3743,7 @@
                         color: #866739;
                         text-align: center;
                         z-index: 3;
-                        top: 429px;
+                        top: 319px;
                         ;left: calc(50% - 600px + 442px);
                         ;width: 115px;
                         height: auto;
@@ -3671,7 +3819,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1780760554668000010"] {
                         z-index: 3;
-                        top: 201px;
+                        top: 91px;
                         ;left: calc(50% - 600px + 598px);
                         ;width: 2px;
                         height: auto;
@@ -3689,7 +3837,7 @@
                     @media screen and (max-width: 1199px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760554668000010"] {
                             display:table;
-                            top: 201px;
+                            top: 91px;
                             ;left: calc(50% - 480px + 479px);
                             ;height: auto;
                         }
@@ -3698,7 +3846,7 @@
                     @media screen and (max-width: 959px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760554668000010"] {
                             display:table;
-                            top: 201px;
+                            top: 91px;
                             ;left: calc(50% - 320px + 319px);
                             ;height: auto;
                         }
@@ -3707,7 +3855,7 @@
                     @media screen and (max-width: 639px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760554668000010"] {
                             display:table;
-                            top: 201px;
+                            top: 91px;
                             ;left: calc(50% - 240px + 239px);
                             ;height: auto;
                         }
@@ -3716,7 +3864,7 @@
                     @media screen and (max-width: 479px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760554668000010"] {
                             display:table;
-                            top: 201px;
+                            top: 91px;
                             ;left: calc(50% - 160px + 159px);
                             ;height: auto;
                         }
@@ -3724,7 +3872,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1780760716135000016"] {
                         z-index: 3;
-                        top: 368px;
+                        top: 258px;
                         ;left: calc(50% - 600px + 592px);
                         ;width: 14px;
                         height: auto;
@@ -3737,7 +3885,7 @@
                     @media screen and (max-width: 1199px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760716135000016"] {
                             display:table;
-                            top: 368px;
+                            top: 258px;
                             ;left: calc(50% - 480px + 473px);
                             ;height: auto;
                         }
@@ -3746,7 +3894,7 @@
                     @media screen and (max-width: 959px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760716135000016"] {
                             display:table;
-                            top: 368px;
+                            top: 258px;
                             ;left: calc(50% - 320px + 313px);
                             ;height: auto;
                         }
@@ -3755,7 +3903,7 @@
                     @media screen and (max-width: 639px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760716135000016"] {
                             display:table;
-                            top: 368px;
+                            top: 258px;
                             ;left: calc(50% - 240px + 233px);
                             ;height: auto;
                         }
@@ -3764,7 +3912,7 @@
                     @media screen and (max-width: 479px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760716135000016"] {
                             display:table;
-                            top: 368px;
+                            top: 258px;
                             ;left: calc(50% - 160px + 153px);
                             ;height: auto;
                         }
@@ -3772,7 +3920,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1780760740624000017"] {
                         z-index: 3;
-                        top: 445px;
+                        top: 335px;
                         ;left: calc(50% - 600px + 592px);
                         ;width: 14px;
                         height: auto;
@@ -3785,7 +3933,7 @@
                     @media screen and (max-width: 1199px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760740624000017"] {
                             display:table;
-                            top: 445px;
+                            top: 335px;
                             ;left: calc(50% - 480px + 473px);
                             ;height: auto;
                         }
@@ -3794,7 +3942,7 @@
                     @media screen and (max-width: 959px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760740624000017"] {
                             display:table;
-                            top: 445px;
+                            top: 335px;
                             ;left: calc(50% - 320px + 313px);
                             ;height: auto;
                         }
@@ -3803,7 +3951,7 @@
                     @media screen and (max-width: 639px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760740624000017"] {
                             display:table;
-                            top: 445px;
+                            top: 335px;
                             ;left: calc(50% - 240px + 233px);
                             ;height: auto;
                         }
@@ -3812,7 +3960,7 @@
                     @media screen and (max-width: 479px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760740624000017"] {
                             display:table;
-                            top: 445px;
+                            top: 335px;
                             ;left: calc(50% - 160px + 153px);
                             ;height: auto;
                         }
@@ -3820,7 +3968,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1780760688963"] {
                         z-index: 3;
-                        top: 280px;
+                        top: 170px;
                         ;left: calc(50% - 600px + 592px);
                         ;width: 14px;
                         height: auto;
@@ -3833,7 +3981,7 @@
                     @media screen and (max-width: 1199px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760688963"] {
                             display:table;
-                            top: 280px;
+                            top: 170px;
                             ;left: calc(50% - 480px + 473px);
                             ;height: auto;
                         }
@@ -3842,7 +3990,7 @@
                     @media screen and (max-width: 959px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760688963"] {
                             display:table;
-                            top: 280px;
+                            top: 170px;
                             ;left: calc(50% - 320px + 313px);
                             ;height: auto;
                         }
@@ -3851,7 +3999,7 @@
                     @media screen and (max-width: 639px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760688963"] {
                             display:table;
-                            top: 280px;
+                            top: 170px;
                             ;left: calc(50% - 240px + 233px);
                             ;height: auto;
                         }
@@ -3860,7 +4008,7 @@
                     @media screen and (max-width: 479px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760688963"] {
                             display:table;
-                            top: 280px;
+                            top: 170px;
                             ;left: calc(50% - 160px + 153px);
                             ;height: auto;
                         }
@@ -3868,7 +4016,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1780760766910000019"] {
                         z-index: 3;
-                        top: 198px;
+                        top: 88px;
                         ;left: calc(50% - 600px + 592px);
                         ;width: 14px;
                         height: auto;
@@ -3881,7 +4029,7 @@
                     @media screen and (max-width: 1199px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760766910000019"] {
                             display:table;
-                            top: 198px;
+                            top: 88px;
                             ;left: calc(50% - 480px + 473px);
                             ;height: auto;
                         }
@@ -3890,7 +4038,7 @@
                     @media screen and (max-width: 959px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760766910000019"] {
                             display:table;
-                            top: 198px;
+                            top: 88px;
                             ;left: calc(50% - 320px + 313px);
                             ;height: auto;
                         }
@@ -3899,7 +4047,7 @@
                     @media screen and (max-width: 639px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760766910000019"] {
                             display:table;
-                            top: 198px;
+                            top: 88px;
                             ;left: calc(50% - 240px + 233px);
                             ;height: auto;
                         }
@@ -3908,7 +4056,7 @@
                     @media screen and (max-width: 479px) {
                         #rec2443433773 .tn-elem[data-elem-id="1780760766910000019"] {
                             display:table;
-                            top: 198px;
+                            top: 88px;
                             ;left: calc(50% - 160px + 153px);
                             ;height: auto;
                         }
@@ -3916,7 +4064,7 @@
 
                     #rec2443433773 .tn-elem[data-elem-id="1780760554668000015"] {
                         z-index: 3;
-                        top: 181px;
+                        top: 71px;
                         ;left: calc(50% - 600px + 572px);
                         ;width: 55px;
                         height: auto;
@@ -3963,71 +4111,63 @@
                     }
                 </style>
                 <div class='t396'>
-                    <div class="t396__artboard" data-artboard-recid="2443433773" data-artboard-screens="320,480,640,960,1200" data-artboard-height="489" data-artboard-valign="center" data-artboard-upscale="grid" data-artboard-ovrflw="visible">
+                    <div class="t396__artboard" data-artboard-recid="2443433773" data-artboard-screens="320,480,640,960,1200" data-artboard-height="379" data-artboard-valign="center" data-artboard-upscale="grid" data-artboard-ovrflw="visible">
                         <div class="t396__carrier" data-artboard-recid="2443433773"></div>
                         <div class="t396__filter" data-artboard-recid="2443433773"></div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731771277026942000001' data-elem-id='1771277026942000001' data-elem-type='text' data-field-top-value="45" data-field-left-value="320" data-field-height-value="64" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="34" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
-                            <div class='tn-atom' dir="rtl" field='tn_text_1771277026942000001'>برنامج يوم الزفاف</div>
-                        </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731779543504626 t-animate' data-elem-id='1779543504626' data-elem-type='image' data-field-top-value="110" data-field-left-value="529" data-field-height-value="28" data-field-width-value="139" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="zoomin" data-animate-duration="2" data-animate-scale="0.15" data-animate-mobile="y" data-field-filewidth-value="471" data-field-fileheight-value="95" data-field-heightmode-value="hug" data-field-left-res-320-value="89" data-field-height-res-320-value="28" data-field-left-res-480-value="169" data-field-height-res-480-value="28" data-field-left-res-640-value="249" data-field-height-res-640-value="28" data-field-left-res-960-value="409" data-field-height-res-960-value="28">
-                            <div class='tn-atom'>
-                                <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6239-3062-4232-a662-393266616664/line-divider2.png' src='https://thb.tildacdn.net/tild6239-3062-4232-a662-393266616664/-/resize/20x/line-divider2.png' alt='' imgfield='tn_img_1779543504626'/>
-                            </div>
-                        </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554667000001' data-elem-id='1780760554667000001' data-elem-type='text' data-field-top-value="184" data-field-left-value="642" data-field-height-value="44" data-field-width-value="94" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="203" data-field-left-res-480-value="283" data-field-left-res-640-value="363" data-field-left-res-960-value="523">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554667000001' data-elem-id='1780760554667000001' data-elem-type='text' data-field-top-value="74" data-field-left-value="642" data-field-height-value="44" data-field-width-value="94" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="203" data-field-left-res-480-value="283" data-field-left-res-640-value="363" data-field-left-res-960-value="523">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554667000001'>الاستقبال</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554667000002' data-elem-id='1780760554667000002' data-elem-type='text' data-field-top-value="182" data-field-left-value="454" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="15" data-field-left-res-480-value="95" data-field-left-res-640-value="175" data-field-left-res-960-value="335">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554667000002' data-elem-id='1780760554667000002' data-elem-type='text' data-field-top-value="72" data-field-left-value="454" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="15" data-field-left-res-480-value="95" data-field-left-res-640-value="175" data-field-left-res-960-value="335">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554667000002'>٩:٠٠ م</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554667000003' data-elem-id='1780760554667000003' data-elem-type='text' data-field-top-value="266" data-field-left-value="649" data-field-height-value="44" data-field-width-value="91" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="210" data-field-left-res-480-value="290" data-field-left-res-640-value="370" data-field-left-res-960-value="530">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554667000003' data-elem-id='1780760554667000003' data-elem-type='text' data-field-top-value="156" data-field-left-value="649" data-field-height-value="44" data-field-width-value="91" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="210" data-field-left-res-480-value="290" data-field-left-res-640-value="370" data-field-left-res-960-value="530">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554667000003'>
-                                العرضة<br/>الشعبية
+                                الرقص<br/>الشعبي
                             </div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000004' data-elem-id='1780760554668000004' data-elem-type='text' data-field-top-value="264" data-field-left-value="454" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="15" data-field-left-res-480-value="95" data-field-left-res-640-value="175" data-field-left-res-960-value="335">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000004' data-elem-id='1780760554668000004' data-elem-type='text' data-field-top-value="154" data-field-left-value="454" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="15" data-field-left-res-480-value="95" data-field-left-res-640-value="175" data-field-left-res-960-value="335">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554668000004'>١١:٠٠ م</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000005' data-elem-id='1780760554668000005' data-elem-type='text' data-field-top-value="365" data-field-left-value="654" data-field-height-value="22" data-field-width-value="69" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="215" data-field-left-res-480-value="295" data-field-left-res-640-value="375" data-field-left-res-960-value="535">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000005' data-elem-id='1780760554668000005' data-elem-type='text' data-field-top-value="255" data-field-left-value="654" data-field-height-value="22" data-field-width-value="69" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="215" data-field-left-res-480-value="295" data-field-left-res-640-value="375" data-field-left-res-960-value="535">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554668000005'>الزفة</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000006' data-elem-id='1780760554668000006' data-elem-type='text' data-field-top-value="352" data-field-left-value="454" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="15" data-field-left-res-480-value="95" data-field-left-res-640-value="175" data-field-left-res-960-value="335">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000006' data-elem-id='1780760554668000006' data-elem-type='text' data-field-top-value="242" data-field-left-value="454" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="15" data-field-left-res-480-value="95" data-field-left-res-640-value="175" data-field-left-res-960-value="335">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554668000006'>١٢:٠٠ ص</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000007' data-elem-id='1780760554668000007' data-elem-type='text' data-field-top-value="442" data-field-left-value="658" data-field-height-value="22" data-field-width-value="61" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="219" data-field-left-res-480-value="299" data-field-left-res-640-value="379" data-field-left-res-960-value="539">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000007' data-elem-id='1780760554668000007' data-elem-type='text' data-field-top-value="332" data-field-left-value="658" data-field-height-value="22" data-field-width-value="61" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="219" data-field-left-res-480-value="299" data-field-left-res-640-value="379" data-field-left-res-960-value="539">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554668000007'>العشاء</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000008' data-elem-id='1780760554668000008' data-elem-type='text' data-field-top-value="429" data-field-left-value="452" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="13" data-field-left-res-480-value="93" data-field-left-res-640-value="173" data-field-left-res-960-value="333">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000008' data-elem-id='1780760554668000008' data-elem-type='text' data-field-top-value="319" data-field-left-value="452" data-field-height-value="47" data-field-width-value="95" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="26" data-field-left-res-320-value="13" data-field-left-res-480-value="93" data-field-left-res-640-value="173" data-field-left-res-960-value="333">
                             <div class='tn-atom' dir="rtl" field='tn_text_1780760554668000008'>١:٠٠ ص</div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000010' data-elem-id='1780760554668000010' data-elem-type='vector' data-field-top-value="201" data-field-left-value="598" data-field-height-value="258" data-field-width-value="2" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="2" data-field-fileheight-value="258" data-field-heightmode-value="hug" data-field-top-res-320-value="201" data-field-left-res-320-value="159" data-field-top-res-480-value="201" data-field-left-res-480-value="239" data-field-top-res-640-value="201" data-field-left-res-640-value="319" data-field-top-res-960-value="201" data-field-left-res-960-value="479">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000010' data-elem-id='1780760554668000010' data-elem-type='vector' data-field-top-value="91" data-field-left-value="598" data-field-height-value="258" data-field-width-value="2" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="2" data-field-fileheight-value="258" data-field-heightmode-value="hug" data-field-top-res-320-value="91" data-field-left-res-320-value="159" data-field-top-res-480-value="91" data-field-left-res-480-value="239" data-field-top-res-640-value="91" data-field-left-res-640-value="319" data-field-top-res-960-value="91" data-field-left-res-960-value="479">
                             <div class='tn-atom tn-atom__vector'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.00 258.00" role="img" aria-label="">
                                     <line fill="transparent" stroke="#af9b6a" stroke-opacity="1" stroke-width="1" x1="1.00" y1="1.00" x2="1.00" y2="257.00" stroke-linecap="round"></line>
                                 </svg>
                             </div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760716135000016' data-elem-id='1780760716135000016' data-elem-type='image' data-field-top-value="368" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="368" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="368" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="368" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="368" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760716135000016' data-elem-id='1780760716135000016' data-elem-type='image' data-field-top-value="258" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="258" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="258" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="258" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="258" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
                             <div class='tn-atom'>
                                 <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6335-6235-4431-a638-396563386331/Decoration_elements_.png' src='https://thb.tildacdn.net/tild6335-6235-4431-a638-396563386331/-/resize/20x/Decoration_elements_.png' alt='' imgfield='tn_img_1780760716135000016'/>
                             </div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760740624000017' data-elem-id='1780760740624000017' data-elem-type='image' data-field-top-value="445" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="445" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="445" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="445" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="445" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760740624000017' data-elem-id='1780760740624000017' data-elem-type='image' data-field-top-value="335" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="335" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="335" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="335" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="335" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
                             <div class='tn-atom'>
                                 <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6335-6235-4431-a638-396563386331/Decoration_elements_.png' src='https://thb.tildacdn.net/tild6335-6235-4431-a638-396563386331/-/resize/20x/Decoration_elements_.png' alt='' imgfield='tn_img_1780760740624000017'/>
                             </div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760688963' data-elem-id='1780760688963' data-elem-type='image' data-field-top-value="280" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="280" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="280" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="280" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="280" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760688963' data-elem-id='1780760688963' data-elem-type='image' data-field-top-value="170" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="170" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="170" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="170" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="170" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
                             <div class='tn-atom'>
                                 <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6335-6235-4431-a638-396563386331/Decoration_elements_.png' src='https://thb.tildacdn.net/tild6335-6235-4431-a638-396563386331/-/resize/20x/Decoration_elements_.png' alt='' imgfield='tn_img_1780760688963'/>
                             </div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760766910000019' data-elem-id='1780760766910000019' data-elem-type='image' data-field-top-value="198" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="198" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="198" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="198" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="198" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760766910000019' data-elem-id='1780760766910000019' data-elem-type='image' data-field-top-value="88" data-field-left-value="592" data-field-height-value="16" data-field-width-value="14" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="52" data-field-fileheight-value="60" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="88" data-field-left-res-320-value="153" data-field-height-res-320-value="16" data-field-top-res-480-value="88" data-field-left-res-480-value="233" data-field-height-res-480-value="16" data-field-top-res-640-value="88" data-field-left-res-640-value="313" data-field-height-res-640-value="16" data-field-top-res-960-value="88" data-field-left-res-960-value="473" data-field-height-res-960-value="16">
                             <div class='tn-atom'>
                                 <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6335-6235-4431-a638-396563386331/Decoration_elements_.png' src='https://thb.tildacdn.net/tild6335-6235-4431-a638-396563386331/-/resize/20x/Decoration_elements_.png' alt='' imgfield='tn_img_1780760766910000019'/>
                             </div>
                         </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000015 ' data-elem-id='1780760554668000015' data-elem-type='image' data-field-top-value="181" data-field-left-value="572" data-field-height-value="55" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="scroll" data-animate-sbs-trg="0.5" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'di':'0','dd':'0','fi':'0'},{'mx':0,'my':80,'sx':1,'sy':1,'op':1,'ro':44,'di':100,'dd':'0','fi':'0'},{'mx':0,'my':169,'sx':1,'sy':1,'op':1,'ro':88,'di':100,'dd':'0','fi':'0'},{'mx':0,'my':247,'sx':1,'sy':1,'op':1,'ro':134,'di':100,'dd':'0','fi':'0'}]" data-field-filewidth-value="615" data-field-fileheight-value="615" data-field-heightmode-value="hug" data-field-left-res-320-value="133" data-field-height-res-320-value="55" data-field-left-res-480-value="213" data-field-height-res-480-value="55" data-field-left-res-640-value="293" data-field-height-res-640-value="55" data-field-left-res-960-value="453" data-field-height-res-960-value="55">
+                        <div class='t396__elem tn-elem tn-elem__24434337731780760554668000015 ' data-elem-id='1780760554668000015' data-elem-type='image' data-field-top-value="71" data-field-left-value="572" data-field-height-value="55" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="scroll" data-animate-sbs-trg="0.5" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'di':'0','dd':'0','fi':'0'},{'mx':0,'my':80,'sx':1,'sy':1,'op':1,'ro':44,'di':100,'dd':'0','fi':'0'},{'mx':0,'my':169,'sx':1,'sy':1,'op':1,'ro':88,'di':100,'dd':'0','fi':'0'},{'mx':0,'my':247,'sx':1,'sy':1,'op':1,'ro':134,'di':100,'dd':'0','fi':'0'}]" data-field-filewidth-value="615" data-field-fileheight-value="615" data-field-heightmode-value="hug" data-field-left-res-320-value="133" data-field-height-res-320-value="55" data-field-left-res-480-value="213" data-field-height-res-480-value="55" data-field-left-res-640-value="293" data-field-height-res-640-value="55" data-field-left-res-960-value="453" data-field-height-res-960-value="55">
                             <div class='tn-atom'>
                                 <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6363-6164-4231-a362-383563623535/flower-decor.png' src='https://thb.tildacdn.net/tild6363-6164-4231-a362-383563623535/-/resize/20x/flower-decor.png' alt='' imgfield='tn_img_1780760554668000015'/>
                             </div>
@@ -4263,16 +4403,16 @@
                 <!-- T396 -->
                 <style>
                     #rec2443433783 .t396__artboard {
-                        height: 541px;
+                        height: 195px;
                         background-color: #f9e6d4;
                     }
 
                     #rec2443433783 .t396__filter {
-                        height: 541px;
+                        height: 195px;
                     }
 
                     #rec2443433783 .t396__carrier {
-                        height: 541px;
+                        height: 195px;
                         background-position: center center;
                         background-attachment: scroll;
                         background-size: cover;
@@ -4741,7 +4881,7 @@
                     }
                 </style>
                 <div class='t396'>
-                    <div class="t396__artboard" data-artboard-recid="2443433783" data-artboard-screens="320,480,640,960,1200" data-artboard-height="541" data-artboard-valign="center" data-artboard-upscale="grid">
+                    <div class="t396__artboard" data-artboard-recid="2443433783" data-artboard-screens="320,480,640,960,1200" data-artboard-height="195" data-artboard-valign="center" data-artboard-upscale="grid">
                         <div class="t396__carrier" data-artboard-recid="2443433783"></div>
                         <div class="t396__filter" data-artboard-recid="2443433783"></div>
                         <div class='t396__elem tn-elem tn-elem__24434337831771277026942000001' data-elem-id='1771277026942000001' data-elem-type='text' data-field-top-value="45" data-field-left-value="320" data-field-height-value="64" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="41" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
@@ -4756,15 +4896,6 @@
                             <div class='tn-atom'>
                                 <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild3263-3561-4339-a533-643564366236/ic_baseline-place_1.png' src='https://thb.tildacdn.net/tild3263-3561-4339-a533-643564366236/-/resize/20x/ic_baseline-place_1.png' alt='' imgfield='tn_img_1779544675299'/>
                             </div>
-                        </div>
-                        <div class='t396__elem tn-elem tn-elem__24434337831780761005554' data-elem-id='1780761005554' data-elem-type='image' data-field-top-value="285" data-field-left-value="390" data-field-height-value="257" data-field-width-value="420" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="1074" data-field-fileheight-value="715" data-field-heightmode-value="hug" data-field-left-res-320-value="-50" data-field-height-res-320-value="257" data-field-left-res-480-value="30" data-field-height-res-480-value="257" data-field-left-res-640-value="110" data-field-height-res-640-value="257" data-field-top-res-960-value="285" data-field-left-res-960-value="270" data-field-height-res-960-value="257">
-                            <div class='tn-atom'>
-                                <img class='tn-atom__img t-img' data-original='https://static.tildacdn.net/tild6666-3763-4439-a131-303039386132/Group_222.png' src='https://thb.tildacdn.net/tild6666-3763-4439-a131-303039386132/-/resize/20x/Group_222.png' alt='' imgfield='tn_img_1780761005554'/>
-                            </div>
-                        </div>
-                    
-                        <div class='t396__elem tn-elem tn-elem__24434337831779545032699000001 t-animate' data-elem-id='1779545032699000001' data-elem-type='text' data-field-top-value="235" data-field-left-value="320" data-field-height-value="29" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="20" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="19" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
-                            <div class='tn-atom' field='tn_text_1779545032699000001'>قاعة روس</div>
                         </div>
                     </div>
                 </div>
@@ -6301,6 +6432,185 @@
                 </script>
                 <!-- /T396 -->
             </div>
+            <!-- ===== Venue Photo + Location (custom, final section) ===== -->
+            <div id="loc-section" class="loc-section">
+                <style>
+                    #loc-section {
+                        position: relative;
+                        background-color: #f9e6d4;
+                        padding: 0 20px 90px;
+                        text-align: center;
+                        direction: rtl;
+                        overflow: hidden;
+                    }
+                    .loc-eyebrow-row {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 18px;
+                        opacity: 1;
+                        transform: translateY(14px);
+                        transition: opacity 0.9s ease, transform 0.9s ease;
+                    }
+                    .loc-eyebrow-row span.line {
+                        display: inline-block;
+                        width: 55px;
+                        height: 1px;
+                        background: #c9ad7a;
+                    }
+                    .loc-eyebrow-row span.word {
+                        font-family: 'EB Garamond', serif;
+                        letter-spacing: 3px;
+                        font-size: 15px;
+                        color: #af9b6a;
+                    }
+                    .loc-title {
+                        font-family: 'Amiri', serif;
+                        font-weight: 700;
+                        font-size: 34px;
+                        color: #4a3624;
+                        margin: 16px 0 45px;
+                        opacity: 1;
+                        transform: translateY(14px);
+                        transition: opacity 0.9s ease 0.1s, transform 0.9s ease 0.1s;
+                    }
+                    #loc-section.loc-inview .loc-eyebrow-row,
+                    #loc-section.loc-inview .loc-title { opacity: 1; transform: translateY(0); }
+
+                    .loc-photo-wrap {
+                        max-width: 520px;
+                        margin: 0 auto 46px;
+                        border-radius: 14px;
+                        overflow: hidden;
+                        box-shadow: 0 22px 46px rgba(74,59,40,0.28);
+                        border: 6px solid #fffaf2;
+                        position: relative;
+                        opacity: 1;
+                        transform: translateY(50px) scale(0.96);
+                        transition: opacity 1.1s cubic-bezier(.22,1,.36,1), transform 1.1s cubic-bezier(.22,1,.36,1);
+                    }
+                    #loc-section.loc-inview .loc-photo-wrap {
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                    .loc-photo-wrap img {
+                        width: 100%;
+                        display: block;
+                        aspect-ratio: 3 / 2;
+                        object-fit: cover;
+                        transform: scale(1.1);
+                        transition: transform 5s ease;
+                        filter: contrast(1.1) saturate(1.08) brightness(1.02);
+                    }
+                    #loc-section.loc-inview .loc-photo-wrap img { transform: scale(1); }
+
+                    /* elegant hall name, placed above the photo */
+                    .loc-hall-heading {
+                        margin: 14px 0 28px;
+                        opacity: 0;
+                        transform: translateY(16px);
+                        transition: opacity 1s ease 0.15s, transform 1s ease 0.15s;
+                    }
+                    #loc-section.loc-inview .loc-hall-heading { opacity: 1; transform: translateY(0); }
+                    .loc-hall-flourish {
+                        display: block;
+                        color: #c9ad7a;
+                        font-size: 20px;
+                        margin-bottom: 8px;
+                        letter-spacing: 2px;
+                    }
+                    .loc-hall-name {
+                        font-family: 'Amiri', serif;
+                        font-weight: 700;
+                        font-size: 32px;
+                        color: #4a3624;
+                        letter-spacing: 0.5px;
+                    }
+                    .loc-hall-rule {
+                        width: 70px;
+                        height: 1px;
+                        background: linear-gradient(90deg, transparent, #c9ad7a, transparent);
+                        margin: 14px auto 0;
+                        transform: scaleX(0);
+                        transition: transform 1s ease 0.5s;
+                    }
+                    #loc-section.loc-inview .loc-hall-rule { transform: scaleX(1); }
+
+                    @media screen and (max-width: 479px) {
+                        .loc-hall-name { font-size: 26px; }
+                    }
+
+                    .loc-map-wrap {
+                        max-width: 520px;
+                        margin: 0 auto;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        border: 6px solid #fffaf2;
+                        box-shadow: 0 16px 34px rgba(74,59,40,0.18);
+                        position: relative;
+                        opacity: 1;
+                        transform: translateY(28px);
+                        transition: opacity 0.9s ease 0.25s, transform 0.9s ease 0.25s;
+                    }
+                    #loc-section.loc-inview .loc-map-wrap { opacity: 1; transform: translateY(0); }
+                    .loc-map-wrap iframe {
+                        width: 100%;
+                        height: 380px;
+                        display: block;
+                        border: 0;
+                    }
+                    .loc-map-labels {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 4px;
+                        padding: 18px 16px 20px;
+                        background: #fffaf2;
+                    }
+                    .loc-map-labels .name { font-family: 'Amiri', serif; font-weight: 700; font-size: 20px; color: #3f3122; }
+                    .loc-map-labels .sub { font-family: 'EB Garamond', serif; font-size: 15px; color: #af9b6a; }
+
+                    @media screen and (max-width: 479px) {
+                        .loc-title { font-size: 26px; }
+                        .loc-map-wrap iframe { height: 300px; }
+                    }
+                </style>
+                <!-- <div class="loc-title">في انتظاركم هناك</div> -->
+
+                <div class="loc-hall-heading">
+                    <span class="loc-hall-flourish">❦</span>
+                    <span class="loc-hall-name">قاعة روز</span>
+                    <div class="loc-hall-rule"></div>
+                </div>
+
+                <div class="loc-photo-wrap">
+                    <img src="images/venue-hall.jpeg" alt="قاعة روز" loading="lazy">
+                </div>
+
+                <div class="loc-map-wrap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.4387658143455!2d39.23138679999999!3d21.607819799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d6ac8a7fa7e9%3A0x8fb8707e472811be!2sRose%20Wedding%20Hall!5e0!3m2!1sen!2seg!4v1790557184450!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <div class="loc-map-labels">
+                        <span class="name">قاعة روز</span>
+                    </div>
+                </div>
+
+                <script>
+                    (function() {
+                        var section = document.getElementById('loc-section');
+                        if (!section) return;
+                        var observer = new IntersectionObserver(function(entries) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    section.classList.add('loc-inview');
+                                    observer.unobserve(section);
+                                }
+                            });
+                        }, { threshold: 0.2 });
+                        observer.observe(section);
+                    })();
+                </script>
+            </div>
+            <!-- ===== /Venue Photo + Location ===== -->
             <div id="rec2443433853" class="r t-rec t-rec_pt_15 t-rec_pb_15" style="padding-top:15px;padding-bottom:15px;background-color:#f9e6d4; " data-animationappear="off" data-record-type="396" data-bg-color="#f9e6d4">
                 <!-- T396 -->
                 <style>
@@ -6629,7 +6939,7 @@
                         <div class="t396__carrier" data-artboard-recid="2443433853"></div>
                         <div class="t396__filter" data-artboard-recid="2443433853"></div>
                         <div class='t396__elem tn-elem tn-elem__24434338531763405219328' data-elem-id='1763405219328' data-elem-type='text' data-field-top-value="196" data-field-left-value="320" data-field-height-value="64" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="41" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200">
-                            <div class='tn-atom' field='tn_text_1763405219328'> We hope to see you.  </div>
+                            <div class='tn-atom wg-dua' dir="rtl" field='tn_text_1763405219328'>اغمرونا بطيب دعواتكم</div>
                         </div>
                         <div class='t396__elem tn-elem tn-elem__24434338531779550300881 ' data-elem-id='1779550300881' data-elem-type='image' data-field-top-value="45" data-field-left-value="483" data-field-height-value="159" data-field-width-value="213" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':0,'ea':'0','dt':0},{'mx':21,'my':0,'sx':1,'sy':1,'op':1,'ro':-13,'ti':350,'ea':'easeOut','dt':300},{'mx':3,'my':0,'sx':1,'sy':1,'op':1,'ro':-1,'ti':300,'ea':'easeInOut','dt':0},{'mx':17,'my':0,'sx':1,'sy':1,'op':1,'ro':-9,'ti':300,'ea':'easeInOut','dt':0},{'mx':6,'my':0,'sx':1,'sy':1,'op':1,'ro':-3,'ti':300,'ea':'easeInOut','dt':0},{'mx':11,'my':0,'sx':1,'sy':1,'op':1,'ro':-6,'ti':300,'ea':'easeInOut','dt':0}]" data-field-filewidth-value="1200" data-field-fileheight-value="896" data-field-heightmode-value="hug" data-field-left-res-320-value="43" data-field-height-res-320-value="159" data-field-left-res-480-value="123" data-field-height-res-480-value="159" data-field-left-res-640-value="203" data-field-height-res-640-value="159" data-field-left-res-960-value="363" data-field-height-res-960-value="159">
                             <div class='tn-atom'>
@@ -6657,193 +6967,7 @@
                 </script>
                 <!-- /T396 -->
             </div>
-          
 
-            <!-- ===== Venue Photo + Location (custom, final section) ===== -->
-            <div id="loc-section" class="loc-section">
-                <style>
-                    #loc-section {
-                        position: relative;
-                        background-color: #f9e6d4;
-                        padding: 70px 20px 90px;
-                        text-align: center;
-                        direction: rtl;
-                        overflow: hidden;
-                    }
-                    .loc-eyebrow-row {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 18px;
-                        opacity: 1;
-                        transform: translateY(14px);
-                        transition: opacity 0.9s ease, transform 0.9s ease;
-                    }
-                    .loc-eyebrow-row span.line {
-                        display: inline-block;
-                        width: 55px;
-                        height: 1px;
-                        background: #c9ad7a;
-                    }
-                    .loc-eyebrow-row span.word {
-                        font-family: 'EB Garamond', serif;
-                        letter-spacing: 3px;
-                        font-size: 15px;
-                        color: #af9b6a;
-                    }
-                    .loc-title {
-                        font-family: 'Amiri', serif;
-                        font-weight: 700;
-                        font-size: 34px;
-                        color: #4a3624;
-                        margin: 16px 0 45px;
-                        opacity: 1;
-                        transform: translateY(14px);
-                        transition: opacity 0.9s ease 0.1s, transform 0.9s ease 0.1s;
-                    }
-                    #loc-section.loc-inview .loc-eyebrow-row,
-                    #loc-section.loc-inview .loc-title { opacity: 1; transform: translateY(0); }
-
-                    .loc-photo-wrap {
-                        max-width: 520px;
-                        margin: 0 auto 46px;
-                        border-radius: 14px;
-                        overflow: hidden;
-                        box-shadow: 0 22px 46px rgba(74,59,40,0.28);
-                        border: 6px solid #fffaf2;
-                        position: relative;
-                        opacity: 1;
-                        transform: translateY(50px) scale(0.96);
-                        transition: opacity 1.1s cubic-bezier(.22,1,.36,1), transform 1.1s cubic-bezier(.22,1,.36,1);
-                    }
-                    #loc-section.loc-inview .loc-photo-wrap {
-                        opacity: 1;
-                        transform: translateY(0) scale(1);
-                    }
-                    .loc-photo-wrap img {
-                        width: 100%;
-                        display: block;
-                        aspect-ratio: 3 / 2;
-                        object-fit: cover;
-                        transform: scale(1.1);
-                        transition: transform 5s ease;
-                        filter: contrast(1.1) saturate(1.08) brightness(1.02);
-                    }
-                    #loc-section.loc-inview .loc-photo-wrap img { transform: scale(1); }
-
-                    /* elegant hall name, placed above the photo */
-                    .loc-hall-heading {
-                        margin: 14px 0 28px;
-                        opacity: 0;
-                        transform: translateY(16px);
-                        transition: opacity 1s ease 0.15s, transform 1s ease 0.15s;
-                    }
-                    #loc-section.loc-inview .loc-hall-heading { opacity: 1; transform: translateY(0); }
-                    .loc-hall-flourish {
-                        display: block;
-                        color: #c9ad7a;
-                        font-size: 20px;
-                        margin-bottom: 8px;
-                        letter-spacing: 2px;
-                    }
-                    .loc-hall-name {
-                        font-family: 'Amiri', serif;
-                        font-weight: 700;
-                        font-size: 32px;
-                        color: #4a3624;
-                        letter-spacing: 0.5px;
-                    }
-                    .loc-hall-rule {
-                        width: 70px;
-                        height: 1px;
-                        background: linear-gradient(90deg, transparent, #c9ad7a, transparent);
-                        margin: 14px auto 0;
-                        transform: scaleX(0);
-                        transition: transform 1s ease 0.5s;
-                    }
-                    #loc-section.loc-inview .loc-hall-rule { transform: scaleX(1); }
-
-                    @media screen and (max-width: 479px) {
-                        .loc-hall-name { font-size: 26px; }
-                    }
-
-                    .loc-map-wrap {
-                        max-width: 520px;
-                        margin: 0 auto;
-                        border-radius: 16px;
-                        overflow: hidden;
-                        border: 6px solid #fffaf2;
-                        box-shadow: 0 16px 34px rgba(74,59,40,0.18);
-                        position: relative;
-                        opacity: 1;
-                        transform: translateY(28px);
-                        transition: opacity 0.9s ease 0.25s, transform 0.9s ease 0.25s;
-                    }
-                    #loc-section.loc-inview .loc-map-wrap { opacity: 1; transform: translateY(0); }
-                    .loc-map-wrap iframe {
-                        width: 100%;
-                        height: 380px;
-                        display: block;
-                        border: 0;
-                    }
-                    .loc-map-labels {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 4px;
-                        padding: 18px 16px 20px;
-                        background: #fffaf2;
-                    }
-                    .loc-map-labels .name { font-family: 'Amiri', serif; font-weight: 700; font-size: 20px; color: #3f3122; }
-                    .loc-map-labels .sub { font-family: 'EB Garamond', serif; font-size: 15px; color: #af9b6a; }
-
-                    @media screen and (max-width: 479px) {
-                        .loc-title { font-size: 26px; }
-                        .loc-map-wrap iframe { height: 300px; }
-                    }
-                </style>
-
-                <div class="loc-eyebrow-row">
-                    <span class="line"></span>
-                    <span class="word">THE VENUE</span>
-                    <span class="line"></span>
-                </div>
-                <!-- <div class="loc-title">في انتظاركم هناك</div> -->
-
-                <div class="loc-hall-heading">
-                    <span class="loc-hall-flourish">❦</span>
-                    <span class="loc-hall-name">قاعة روس</span>
-                    <div class="loc-hall-rule"></div>
-                </div>
-
-                <div class="loc-photo-wrap">
-                    <img src="images/venue-hall.jpeg" alt="قاعة روس" loading="lazy">
-                </div>
-
-                <div class="loc-map-wrap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.4387658143455!2d39.23138679999999!3d21.607819799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d6ac8a7fa7e9%3A0x8fb8707e472811be!2sRose%20Wedding%20Hall!5e0!3m2!1sen!2seg!4v1790557184450!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    <div class="loc-map-labels">
-                        <span class="name">قاعة روس</span>
-                    </div>
-                </div>
-
-                <script>
-                    (function() {
-                        var section = document.getElementById('loc-section');
-                        if (!section) return;
-                        var observer = new IntersectionObserver(function(entries) {
-                            entries.forEach(function(entry) {
-                                if (entry.isIntersecting) {
-                                    section.classList.add('loc-inview');
-                                    observer.unobserve(section);
-                                }
-                            });
-                        }, { threshold: 0.2 });
-                        observer.observe(section);
-                    })();
-                </script>
-            </div>
-            <!-- ===== /Venue Photo + Location ===== -->
         </div>
         <!--/allrecords-->
         <!-- Stat -->
